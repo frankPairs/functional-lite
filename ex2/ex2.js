@@ -14,17 +14,13 @@ function not(predicate) {
   };
 }
 
-function output(txt) {
-  console.log(txt);
-}
-
 function isShortEnough(str) {
   return str.length <= 5;
 }
 
 var msg1 = 'Hello';
 var msg2 = msg1 + ' World';
-var printIf = when(output);
+var printIf = when(console.log.bind(console));
 var isLongEnough = not(isShortEnough);
 
 printIf(isShortEnough)(msg1); // Hello
