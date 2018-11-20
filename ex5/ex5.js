@@ -1,6 +1,10 @@
-function foo() { /* .. */ }
+function foo(n1, n2) {
+  return function add() {
+    return n1 + n2;
+  };
+}
 
-var x = foo(3,4);
+var x = foo(3, 4);
 
-x();	// 7
-x();	// 7
+console.log(x());
+console.log(x());
